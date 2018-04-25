@@ -62,10 +62,10 @@
                 "aadClientSecret": {
                         "value": "AAD_CLIENT_SECRET"
                 },
-		"resourceGroup": {
+		"theresourceGroup": {
                         "value": "REPLACE"
                 }
-                "location": {
+                "thelocation": {
                         "value": "LOCATION"
                 }
 		"keyVaultSecret": {
