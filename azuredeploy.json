@@ -135,6 +135,48 @@
 				"description": "Pool ID with OpenShift entitlements (To find it, run on registered server: subscription-manager list)"
 			}
 		},
+                "tenantId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Azure Tenant ID"
+                        }
+                },
+                "subscriptionId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Azure Subscription ID"
+                        }
+                },
+                "aadClientId": {
+                        "type": "string",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Azure AAD Client ID"
+                        }
+                },
+                "aadClientSecret": {
+                        "type": "securestring",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Azure AAD Client secret"
+                        }
+                },
+                "theresourceGroup": {
+                        "type": "string",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Resource group"
+                        }
+                },
+		"thelocation": {
+                        "type": "string",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Location"
+                        }
+                },
 		"sshPublicKey": {
 			"type": "securestring",
 			"metadata": {
