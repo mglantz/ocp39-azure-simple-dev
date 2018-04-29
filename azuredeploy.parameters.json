@@ -50,24 +50,6 @@
 		"keyVaultResourceGroup": {
 			"value": "REPLACE"
 		},
-                "tenantId": {
-			"value": "TENANTID"
-		},
-                "subscriptionId": {
-                        "value": "SUBSCRIPTION_ID"
-                },
-                "aadClientId": {
-                        "value": "AAD_CLIENT_ID"
-                },
-                "aadClientSecret": {
-                        "value": "AAD_CLIENT_SECRET"
-                },
-		"theresourceGroup": {
-                        "value": "REPLACE"
-                }
-                "thelocation": {
-                        "value": "LOCATION"
-                }
 		"keyVaultSecret": {
 			"value": "REPLACESecretName"
 		},

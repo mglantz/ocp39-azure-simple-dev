@@ -84,48 +84,6 @@
 				"description": "Administrator password for OpenShift Console"
 			}
 		},
-                "tenantId": {
-                        "type": "string",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Azure Tenant ID"
-                        }
-                },
-                "subscriptionId": {
-                        "type": "string",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Azure Subscription ID"
-                        }
-                },
-                "aadClientId": {
-                        "type": "string",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Azure AAD Client ID"
-                        }
-                },
-                "aadClientSecret": {
-                        "type": "securestring",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Azure AAD Client secret"
-                        }
-                },
-                "theresourceGroup": {
-                        "type": "string",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Resource group"
-                        }
-                },
-                "thelocation": {
-                        "type": "string",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "Location"
-                        }
-                },
 		"xipioDomain": {
 			"type": "string",
 			"metadata": {
