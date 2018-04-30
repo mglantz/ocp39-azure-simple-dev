@@ -163,7 +163,7 @@ cat > azuredeploy.parameters.json << EOF
 		"aadClientSecret": {
                         "value": "$AADCLIENT_SECRET"
                 },
-		"theResourceGroup": {
+		"theGroup": {
                         "value": "$GROUP"
                 },
                 "theLocation": {
@@ -187,6 +187,13 @@ azure keyvault secret set -u ${GROUP}KeyVaultName -s ${GROUP}SecretName --file ~
 
 # Enable key vault to be used for deployment
 azure keyvault set-policy -u ${GROUP}KeyVaultName --enabled-for-template-deployment true
+
+# Set SP trust
+azure role assignment create --objectId ${PRINCIPAL_ID} -o contributor -c /subscriptions/${SUBSCRIPTION_ID}
+
+# Create storage account
+STORAGEACCOUNT_NAME="${GROUP}storageaccount"
+azure storage account create --sku-name "LRS" --kind "Storage" -g $GROUP ${STORAGEACCOUNT_NAME} -l $LOCATION
 
 # Launch deployment of cluster, after this it’s just waiting for it to complete. 
 # azuredeploy.parameters.json needs to be populated with valid values first, before you run this.
