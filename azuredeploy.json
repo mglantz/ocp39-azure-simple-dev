@@ -204,14 +204,6 @@
                                 "description": "aadClientSecret"
                         }
                 },
-                "aadClientSecret": {
-                        "type": "string",
-                        "defaultValue": "aadClientSecret",
-                        "minLength": 1,
-                        "metadata": {
-                                "description": "aadClientSecret"
-                        }
-                },
                 "theLocation": {
                         "type": "string",
                         "defaultValue": "northeurope",
@@ -1339,7 +1331,7 @@
 					]
 				},
 				"protectedSettings": {
-					"commandToExecute": "[concat('bash ', variables('bastionPrepScriptFileName'), ' ', parameters('cloudAccessUsername'), ' ', variables('singlequote'), parameters('cloudAccessPassword'), variables('singlequote'), ' ', parameters('cloudAccessPoolId'))]"
+					"commandToExecute": "[concat('bash ', variables('bastionPrepScriptFileName'), ' ', parameters('cloudAccessUsername'), ' ', variables('singlequote'), parameters('cloudAccessPassword'), variables('singlequote'), ' ', parameters('cloudAccessPoolId'), variables('singlequote'), ' ', parameters('tenantId'), variables('singlequote'), ' ', parameters('subscriptionId'), variables('singlequote'), ' ', parameters('aadClientId'), variables('singlequote'), ' ', parameters('aadClientSecret'), variables('singlequote'), ' ', parameters('aadClientSecret'), variables('singlequote'), ' ', parameters('theLocation'), variables('singlequote'), ' ', parameters('theGroup'))]"
 				}
 			}
 		}, {
