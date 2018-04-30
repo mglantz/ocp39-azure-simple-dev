@@ -4,6 +4,23 @@ echo $(date) " - Starting Script"
 USER=$1
 PASSWORD="$2"
 POOL_ID=$3
+TENANT_ID=$4
+SUBSCRIPTION_ID="$5"
+AADCLIENT_ID="$6"
+AADCLIENT_SECRET="$7"
+THELOCATION="$8"
+THEGROUP="$9"
+
+mkdir -p /etc/azure
+echo "tenantId: ${TENANT_ID}" >>/etc/azure/azure.conf
+echo "subscriptionId: ${SUBSCRIPTION_ID}" >>/etc/azure/azure.conf
+echo "aadClientId: ${AAC_CLIENT_ID}" >>/etc/azure/azure.conf
+echo "aadClientSecret: ${SP_PASSWORD}" >>/etc/azure/azure.conf
+echo "aadTenantId:" >>/etc/azure/azure.conf
+echo "resourceGroup: ${THEGROUP}" >>/etc/azure/azure.conf
+echo "location: ${THELOCATION}" >>/etc/azure/azure.conf
+chmod a+rx /etc/azure
+chmod a+r /etc/azure/azure.conf
 
 # Verify that we have access to Red Hat Network
 ITER=0
