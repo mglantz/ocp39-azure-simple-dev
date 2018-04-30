@@ -52,6 +52,7 @@ if [ -f ./deploy.cfg ]; then
 	if test -z $KEYVAULTSECRETNAME; then
 		KEYVAULTSECRETNAME=${GROUP}SecretName
 	fi
+	
 	if test -z "$PUBLIC_SSH_KEY"; then
 		if [ -f ~/.ssh/id_rsa.pub ]; then
 			PUBLIC_SSH_KEY="$(cat ~/.ssh/id_rsa.pub)"
@@ -146,7 +147,28 @@ cat > azuredeploy.parameters.json << EOF
 		},
 		"defaultSubDomain": {
 			"value": "$CUSTOMDOMAIN"
-		}
+		},
+                "objectId": {
+                        "value": "$PRINCIPAL_ID"
+                },
+                "tenantId": {
+                        "value": "$TENANT_ID"
+                },
+                "subscriptionId": {
+                        "value": "$SUBSCRIPTION_ID"
+                },
+                "aadClientId": {
+                        "value": "$AADCLIENT_ID"
+                },
+		"aadClientSecret": {
+                        "value": "$AADCLIENT_SECRET"
+                },
+		"theResourceGroup": {
+                        "value": "$GROUP"
+                },
+                "theLocation": {
+                        "value": "$LOCATION"
+                }
 	}
 }
 EOF
