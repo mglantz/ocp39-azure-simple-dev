@@ -148,9 +148,6 @@ cat > azuredeploy.parameters.json << EOF
 		"defaultSubDomain": {
 			"value": "$CUSTOMDOMAIN"
 		},
-                "objectId": {
-                        "value": "$PRINCIPAL_ID"
-                },
                 "tenantId": {
                         "value": "$TENANT_ID"
                 },
