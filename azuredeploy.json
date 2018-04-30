@@ -172,14 +172,62 @@
 				"description": "Default Subdomain type - xip.io or custom (defined in next parameter)"
 			}
 		},
-		"defaultSubDomain": {
-			"type": "string",
-			"defaultValue": "contoso.com",
-			"minLength": 1,
-			"metadata": {
-				"description": "Default Subdomain for application routing (Wildcard DNS) - must enter something even if you are using xip.io"
-			}
-		}
+                "tenantId": {
+                        "type": "string",
+                        "defaultValue": "tenantId",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "tenantId"
+                        }
+                },
+                "subscriptionId": {
+                        "type": "string",
+                        "defaultValue": "subscriptionId",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "subscriptionId"
+                        }
+                },
+                "aadClientId": {
+                        "type": "string",
+                        "defaultValue": "aadClientId",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "aadClientId"
+                        }
+                },
+                "aadClientSecret": {
+                        "type": "string",
+                        "defaultValue": "aadClientSecret",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "aadClientSecret"
+                        }
+                },
+                "aadClientSecret": {
+                        "type": "string",
+                        "defaultValue": "aadClientSecret",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "aadClientSecret"
+                        }
+                },
+                "theLocation": {
+                        "type": "string",
+                        "defaultValue": "northeurope",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Azure Location of deployment"
+                        }
+                },
+                "theGroup": {
+                        "type": "string",
+                        "defaultValue": "thegroup",
+                        "minLength": 1,
+                        "metadata": {
+                                "description": "Resource group name of deployment"
+                        }
+                }
 	},
 	"variables": {
 		"location": "[resourceGroup().location]",
